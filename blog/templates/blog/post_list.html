@@ -6,11 +6,13 @@
         <div>
             <h1><a href="/">Blog Django Girls</a></h1>
         </div>
+        {% for post in posts %}
         <div>
-            <p>publicado: 16.11.2024, 14:24</p>
-            <h2><a href="">Meu Primeiro Post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p>publicado: {{ post.published_date</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
+        {% endfor %}
         <div>
             <p>publicado: 16.11.2024, 14:24</p>
             <h2><a href="">Meu Segundo Post</a></h2>
